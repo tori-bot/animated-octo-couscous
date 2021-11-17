@@ -1,0 +1,89 @@
+{% extends 'hospital/homebase.html' %} {% load static %} {% block content %}
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000,
+          0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+          0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+  </style>
+</head>
+<br />
+
+<br />
+
+<div class="jumbotron" style="margin-bottom: 0px; margin-top: 0px">
+  <br />
+  <h5 class="display-3 glow">You’ll Love the Way We Care for You</h5>
+  <br /><br /><br /><br /><br />
+  <p></p>
+  {% comment %}
+  <h3>Emergency ?</h3>
+  {% endcomment %}
+
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/patientclick" role="button"
+      >Register
+    </a>
+  </p>
+  <br /><br />
+</div>
+
+<br /><br /><br /><br />
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br /><br /><br />
+{% comment %}
+<div id="my-store-67872291"></div>
+<div>
+  <script
+    data-cfasync="false"
+    type="text/javascript"
+    src="https://app.ecwid.com/script.js?67872291&data_platform=code&data_date=2021-11-05"
+    charset="utf-8"
+  ></script>
+  {% endcomment %}
+  <script type="text/javascript">
+    xProductBrowser(
+      "categoriesPerRow=3",
+      "views=grid(20,3) list(60) table(60)",
+      "categoryView=grid",
+      "searchView=list",
+      "id=my-store-67872291"
+    );
+  </script>
+</div>
+{% endblock content %}
